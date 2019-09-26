@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <ImageView
+    android:id="@+id/img_close"
+    android:layout_width="16dp"
+    android:layout_height="16dp"
+    android:layout_gravity="end"
+    android:layout_marginTop="9dp"
+    android:layout_marginEnd="9dp"
+    android:src="@drawable/eip_img_close" />
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="22dp"
+    android:layout_marginBottom="33dp"
+    android:orientation="horizontal">
+
+    <ImageView
+      android:id="@+id/img_last_year"
+      android:layout_width="24dp"
+      android:layout_height="24dp"
+      android:layout_marginStart="6dp"
+      android:src="@drawable/eip_img_last_year" />
+
+    <ImageView
+      android:id="@+id/img_last_month"
+      android:layout_width="24dp"
+      android:layout_height="24dp"
+      android:layout_marginStart="27dp"
+      android:layout_toEndOf="@+id/img_last_year"
+      android:src="@drawable/eip_img_last_month" />
+
+    <TextView
+      android:id="@+id/tv_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:text="xxxx年xx月"
+      android:textColor="#666666"
+      android:textSize="18sp"
+      android:textStyle="bold" />
+
+    <ImageView
+      android:id="@+id/img_next_year"
+      android:layout_width="24dp"
+      android:layout_height="24dp"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="6dp"
+      android:src="@drawable/eip_img_next_year" />
+
+    <ImageView
+      android:id="@+id/img_next_month"
+      android:layout_width="24dp"
+      android:layout_height="24dp"
+      android:layout_marginStart="27dp"
+      android:layout_toStartOf="@+id/img_next_year"
+      android:src="@drawable/eip_img_next_month" />
+
+  </RelativeLayout>
+
+  <com.example.myapplication.calendarView.CalendarView
+    android:id="@+id/calendarView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F9F9F9"
+    app:calendar_height="46dp"
+    app:calendar_padding="10dp"
+    app:current_day_text_color="#333"
+    app:current_month_lunar_text_color="#CFCFCF"
+    app:current_month_text_color="#4f4f4f"
+    app:day_text_size="15sp"
+    app:max_select_range="-1"
+    app:min_select_range="-1"
+    app:min_year="2004"
+    app:month_view="com.example.myapplication.calendarView.CustomRangeMonthView"
+    app:month_view_show_mode="mode_only_current"
+    app:other_month_text_color="#e1e1e1"
+    app:scheme_text="假"
+    app:scheme_text_color="#333"
+    app:scheme_theme_color="#333"
+    app:select_mode="range_mode"
+    app:selected_text_color="#fff"
+    app:selected_theme_color="#00A0E9"
+    app:week_background="#F9F9F9"
+    app:week_text_color="#999999"
+    app:week_line_background="#ffe6e6e6"
+    app:week_line_margin="18dp"
+    app:week_view="com.example.myapplication.calendarView.CustomRangeWeekView"
+    app:year_view_day_text_color="#333333"
+    app:year_view_day_text_size="9sp"
+    app:year_view_month_text_color="#ff0000"
+    app:year_view_month_text_size="20sp"
+    app:year_view_scheme_color="#f17706" />
+
+</LinearLayout>
